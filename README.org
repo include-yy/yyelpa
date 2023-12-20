@@ -77,4 +77,3 @@ README 示例如下：
   (asmd-mul 1 2) => 2
   (asmd-div 1 2) => 0
 #+END_SRC
-
