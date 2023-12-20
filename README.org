@@ -17,9 +17,10 @@
 #+BEGIN_SRC elisp
   (add-to-list 'package-archives
 	       '("yyelpa" . "https://elpa.egh0bww1.com/packages/"))
-  ;; 设置高优先级
+  (add-to-list 'package-unsigned-archives "yyelpa")
+  ;; （可选）设置高优先级
   (setq package-archive-priorities '(("yyelpa" . 100)))
-  ;; 锁定某些包到 yyelpa
+  ;; （可选）锁定某些包到 yyelpa
   (setq package-pinned-packages '((asmd . "yyelpa")))
 #+END_SRC
 
@@ -33,7 +34,7 @@
 - 包中的代码文件必须以包名作为文件前缀，提供包元信息的代码文件名必须与目录名相同
 - 除代码文件外只能包含名为 README 的说明文件和名为 Changelog.txt 的 log 文件
   - README 内容应尽量简短，包含用途和安装说明即可
-  - Changelog.txt 记录包的变更信息，格式可参考 [[https://android.googlesource.com/platform/tools/build/+/332436805ed039ef7bf5f9d9e9052efbe5c356d8/changelog.txt][android changelog.txt]]
+  - Changelog.txt 记录包的变更信息
 
 含元信息的代码文件格式示例如下所示：
 
@@ -61,19 +62,4 @@
   ;; {code start here}
 
   ;;; {pkgname}.el ends here
-#+END_SRC
-
-README 示例如下：
-
-#+BEGIN_SRC text
-  asmd.el 提供了最基本的加减乘除运算支持
-
-  例子：
-
-  (require 'asmd)
-
-  (asmd-add 1 2) => 3
-  (asmd-sub 1 2) => -1
-  (asmd-mul 1 2) => 2
-  (asmd-div 1 2) => 0
 #+END_SRC
