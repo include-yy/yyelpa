@@ -5,10 +5,10 @@
 本仓库的目的是提供一个稳定的 emacs 基础包环境，并保证包的安全性：
 
 - 读过所有添加的包代码
-- 为需要测试的包添加了的测试代码，并在构建前通过所有测试
-- 只保留最基本的代码文件和 README 以节省空间
+- 为需要测试的包添加测试代码，并在构建前通过所有测试
+- 包体只保留最基本的代码文件和 README 以节省空间
 
-当前对应 emacs 版本为 29。
+更多信息可以参考 [[https://github.com/include-yy/yyelpa/wiki][wiki]]。
 
 ** 如何使用
 
@@ -24,42 +24,4 @@
   (setq package-pinned-packages '((asmd . "yyelpa")))
 #+END_SRC
 
-** 如何添加想要的包
-
-如果您有兴趣添加包到这个 ELPA 中来，最简单的方法是通过 issue 告诉我包的详细信息，我会抽时间阅读并测试代码，并考虑是否将其加入。
-
-如果您有 elisp 编程经验，可以提交 PR，PR 有以下要求：
-
-- 包需要位于 =packages= 目录下，目录名与包名一致
-- 包中的代码文件必须以包名作为文件前缀，提供包元信息的代码文件名必须与目录名相同
-- 除代码文件外只能包含名为 README 的说明文件和名为 Changelog.txt 的 log 文件
-  - README 内容应尽量简短，包含用途和安装说明即可
-  - Changelog.txt 记录包的变更信息
-
-含元信息的代码文件格式示例如下所示：
-
-#+BEGIN_SRC elisp
-  ;;; {pkgname}.el --- <short doc> -*- lexical-binding:t; -*-
-
-  ;; Copyright (C) {year} {name} <{email}>
-
-  ;; Author: <name> <{email}>
-  ;; Created: {day mon year}
-
-  ;; Package-Version: {version}
-  ;; Package-Requires: ((emacs "29.1"))
-  ;; Keywords: {k1 k2 ...}
-  ;; URL: https://include-yy/yyelpa
-
-  ;; {LICENSE}
-
-  ;;; Commentary:
-
-  ;; {some comments here}
-
-  ;;; Code:
-
-  ;; {code start here}
-
-  ;;; {pkgname}.el ends here
-#+END_SRC
+调用 =package-refresh-contents= ，即可看见 yyelpa 中的包。
