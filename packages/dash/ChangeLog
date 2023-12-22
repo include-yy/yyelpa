@@ -1,0 +1,8 @@
+2023-12-21  include-yy  <yy@egh0bww1.com>
+
+	* dash.el 添加 dash 库，来自 https://github.com/magnars/dash.el
+	Commit: 6db80c711ce947f6c6fa11e5c2257fff2c79d139
+
+	* test.el 添加测试文件
+
+	* README 添加 readme 文件

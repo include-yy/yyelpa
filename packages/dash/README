@@ -1,0 +1,8 @@
+dsah.el 提供了更加现代的列表 API，可以以更加方便的方式操控列表
+
+本包在 emacs 27.1, 27.2, 28.1, 28.2, 29.1 上使用官方测试文件进行了测试，全部通过
+
+项目原地址：https://github.com/magnars/dash.el
+当前 commit：6db80c711ce947f6c6fa11e5c2257fff2c79d139
+
+
