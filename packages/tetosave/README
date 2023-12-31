@@ -1,0 +1,7 @@
+源自 auto-save 的改良包 tetosave，做了一些简单的改进。
+
+提供了自动保存 buffer 的功能，免去按下 C-x C-s 的烦恼~~~ 安装后在配置文件中添加 `(tetosave-enable)' 即可。可参考 tetosave.el 中的 Commentary 进一步配置。
+
+auto-save 由 lazycat 编写，项目地址为：https://github.com/manateelazycat/auto-save
+
+tetosave 地址为 https://github.com/include-yy/tetosave，当前 commit 为 7613da5b5cc33c4493ff6da53234102b3ecb0e72
