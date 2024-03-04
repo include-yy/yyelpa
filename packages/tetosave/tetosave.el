@@ -7,7 +7,7 @@
 ;; ORG-URL: https://github.com/manateelazycat/auto-save
 ;; Maintainer: include-yy <yy@egh0bww1.com>
 
-;; Package-Version: 1.0
+;; Package-Version: 1.0.1
 ;; Package-Requires: ((emacs "29.1"))
 ;; Keywords: tools
 ;; URL: https://github.com/include-yy/tetosave
@@ -116,7 +116,8 @@ set `write-region-inhibit-fsync' to `t' can speed up save operation."
   "remove all excess spaces and trailing blank lines except for the current line.
 internally uses `delete-trailing-whitespace'"
   (interactive)
-  (let ((begin (line-beginning-position))
+  (let ((buffer-read-only nil)
+	(begin (line-beginning-position))
         (end (point)))
     (save-excursion
       (when (< (point-min) begin)
